@@ -42,10 +42,10 @@
             <td><?php echo $row['responsavel']; ?></td>
             <td><?php echo $row['equipamento']; ?></td>
             <td><?php echo $row['resumo']; ?></td>
-            <td><?php echo $row['anexo']; ?></td>
+            <td><?php echo "<a href=upload/".$row["anexo"].">" . $row["anexo"] . "</a><br />"; ?></td>
             <td><?php echo $row['data']; ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+              <a href="edit.php?id=<?php echo $row['id']?>" class="btn upload/n-secondary">
                 <i class="fas fa-marker"></i>
               </a>
               <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">

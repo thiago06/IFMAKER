@@ -21,7 +21,7 @@ if (isset($_POST['save_task'])) {
 
   $_SESSION['message'] = 'Cadastrado!';
   $_SESSION['message_type'] = 'success';
-  header('Location: index.php');
+  header('Location: listagem.php');
 
 }
 

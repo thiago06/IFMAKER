@@ -4,6 +4,7 @@ $titulo = '';
 $responsavel = '';
 $equipamento = '';
 $resumo = '';
+$anexo = '';
 
 if  (isset($_GET['id'])) {
   $id = $_GET['id'];
@@ -15,21 +16,22 @@ if  (isset($_GET['id'])) {
     $responsavel = $row['responsavel'];
     $equipamento = $row['equipamento'];
     $resumo = $row['resumo'];
+    $anexo = $row['anexo'];
   }
 }
 
 if (isset($_POST['update'])) {
   $id = $_GET['id'];
-  $titulo = $row['titulo'];
-  $responsavel = $row['responsavel'];
-  $equipamento = $row['equipamento'];
-  $resumo = $row['resumo'];
+  $titulo = $_POST['titulo'];
+  $responsavel = $_POST['responsavel'];
+  $equipamento = $_POST['equipamento'];
+  $resumo = $_POST['resumo'];
 
   $query = "UPDATE projeto set titulo = '$titulo', responsavel = '$responsavel', equipamento = '$equipamento', resumo = '$resumo' WHERE id=$id";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Projeto Atualizado!';
   $_SESSION['message_type'] = 'warning';
-  header('Location: index.php');
+  header('Location: listagem.php');
 }
 ?>
 
@@ -51,12 +53,10 @@ if (isset($_POST['update'])) {
         <div class="form-group">
         <textarea name="resumo" class="form-control" cols="30" rows="10"><?php echo $resumo;?></textarea>
         </div>
-        <div class="form-group">
-          <input name="arquivo" type="file" class="form-control" value="<?php echo $arquivo; ?>">
-        </div>
+
         <button class="btn-success" name="update">
           Atualizar
-</button>
+        </button>
       </form>
       </div>
     </div>
