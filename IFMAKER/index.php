@@ -12,7 +12,11 @@
   </div>
   <br>
   <div class="d-flex justify-content-center align-items-center">
-    <a class="link" href="listagem.php">CONSULTA DE PROJETOS</a> 
+    <a class="link" href="listagemProjetos.php">CONSULTA DE PROJETOS</a> 
+  </div>
+  <br>
+  <div class="d-flex justify-content-center align-items-center">
+    <a class="link" href="listagemUsuarios.php">CONSULTA DE USUARIOS</a> 
   </div>
   <br>
 
