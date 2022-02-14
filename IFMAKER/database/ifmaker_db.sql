@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Fev-2022 às 15:22
+-- Tempo de geração: 14-Fev-2022 às 21:17
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 8.0.8
 
@@ -73,10 +73,10 @@ INSERT INTO `projeto` (`id`, `titulo`, `responsavel`, `equipamento`, `resumo`, `
 --
 
 CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
   `nome` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `senha` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `matricula` int(11) NOT NULL,
   `data` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -84,8 +84,8 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`nome`, `email`, `senha`, `matricula`, `data`) VALUES
-('Thiago', 'thiago.guareschi@ibiruba.ifrs.edu.br', '123456', 789654, '2022-02-14 13:56:06');
+INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `data`) VALUES
+(2, 'Thiago Guareschi', 'thiago.guareschi@ibiruba.ifrs.edu.br', 's49p20t1', '2022-02-14 19:09:26');
 
 --
 -- Índices para tabelas despejadas
@@ -107,7 +107,7 @@ ALTER TABLE `projeto`
 -- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`matricula`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -123,7 +123,13 @@ ALTER TABLE `arquivo`
 -- AUTO_INCREMENT de tabela `projeto`
 --
 ALTER TABLE `projeto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
