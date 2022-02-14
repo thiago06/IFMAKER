@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Jan-2022 às 23:33
--- Versão do servidor: 10.4.17-MariaDB
--- versão do PHP: 8.0.2
+-- Tempo de geração: 14-Fev-2022 às 15:22
+-- Versão do servidor: 10.4.20-MariaDB
+-- versão do PHP: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -64,8 +64,28 @@ CREATE TABLE `projeto` (
 INSERT INTO `projeto` (`id`, `titulo`, `responsavel`, `equipamento`, `resumo`, `data`, `anexo`) VALUES
 (6, 'Projeto 1', 'Thiago', 'Impressora 3D', 'Sei lá\r\n', '2022-01-25 20:36:37', ''),
 (7, 'Projeto 2', 'Thiago', 'Impressorassora 4', 'f', '2022-01-25 21:00:11', ''),
-(8, 'TESTE', 'TESTE', 'testea', 'frara', '2022-01-25 21:04:52', ''),
-(11, 'Upload', 'up', 'up', 'T', '2022-01-25 21:42:41', '748c00055be7a2e4a72c155c643a5654.pdf');
+(8, 'TESTE', 'TESTE', 'testeab', 'frara', '2022-01-25 21:04:52', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `nome` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `senha` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `matricula` int(11) NOT NULL,
+  `data` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `matricula`, `data`) VALUES
+('Thiago', 'thiago.guareschi@ibiruba.ifrs.edu.br', '123456', 789654, '2022-02-14 13:56:06');
 
 --
 -- Índices para tabelas despejadas
@@ -84,6 +104,12 @@ ALTER TABLE `projeto`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`matricula`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -97,7 +123,7 @@ ALTER TABLE `arquivo`
 -- AUTO_INCREMENT de tabela `projeto`
 --
 ALTER TABLE `projeto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

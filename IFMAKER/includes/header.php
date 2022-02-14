@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <title>IF MAKER</title>
@@ -15,6 +15,6 @@
         <a class="navbar-brand" href="index.php">
             <img src="https://www.ifpb.edu.br/prpipg/pesquisa/imagens-pesquisa/ifpb.png/@@images/0609b1d7-4a7d-41be-bd18-081ecb35eb9e.png" width="60" height="30" class="d-inline-block align-top" alt="">
             IF MAKER
-        </a>
+        </a>	
     </nav>
 
