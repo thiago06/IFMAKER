@@ -22,7 +22,6 @@
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Matricula</th>
             <th>E-Mail</th>
             <th>Senha</th>
             <th>Data</th>
@@ -38,15 +37,14 @@
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
             <td><?php echo $row['nome']; ?></td>
-            <td><?php echo $row['matricula']; ?></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['senha']; ?></td>
             <td><?php echo $row['data']; ?></td>
             <td>
-              <a href="edit_user.php?id=<?php echo $row['matricula']?>" class="btn upload/n-secondary">
+              <a href="edit_user.php?id=<?php echo $row['id']?>" class="btn upload/n-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="delete_user.php?id=<?php echo $row['matricula']?>" class="btn btn-danger">
+              <a href="delete_user.php?id=<?php echo $row['id']?>" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>

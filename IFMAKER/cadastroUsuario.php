@@ -21,19 +21,16 @@
       <h1 class="d-flex justify-content-center align-items-center">Cadastro de Usuario</h1>
       <br>
 
-      <div class="card card-body">
-        <form action="save_user.php" method="POST" enctype="text/plain">
+      <div class="card card-body" style="justify-content-center">
+        <form action="save_user.php" method="POST">
           <div class="form-group">
-            <input type="text" name="nome" class="form-control" placeholder="Nome" autofocus>
+            <input type="text" name="nome" class="form-control" placeholder="Nome" required autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="matricula" class="form-control" placeholder="Matricula" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" class="form-control" placeholder="E-Mail" autofocus>
+            <input type="email" name="email" class="form-control" placeholder="E-Mail" required autofocus>
           </div>
 		  <div class="form-group">
-            <input type="password" name="senha" class="form-control" placeholder="Senha" autofocus>
+            <input type="password" name="senha" class="form-control" placeholder="Senha" required autofocus>
           </div>
           <input type="submit" name="save_user" class="btn btn-success btn-block" value="OK">
         </form>

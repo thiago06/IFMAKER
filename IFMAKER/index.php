@@ -19,6 +19,10 @@
     <a class="link" href="listagemUsuarios.php">CONSULTA DE USUARIOS</a> 
   </div>
   <br>
+  <div class="d-flex justify-content-center align-items-center">
+    <a class="link" href="login.php">LOGIN</a> 
+  </div>
+  <br>
 
 <?php include('includes/footer.php'); ?>
 

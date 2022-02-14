@@ -24,16 +24,16 @@
       <div class="card card-body">
         <form action="save_task.php" method="POST" enctype="multipart/form-data">
           <div class="form-group">
-            <input type="text" name="titulo" class="form-control" placeholder="Título" autofocus>
+            <input type="text" name="titulo" class="form-control" placeholder="Título" required autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="responsavel" class="form-control" placeholder="Responsável" autofocus>
+            <input type="text" name="responsavel" class="form-control" placeholder="Responsável" required autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="equipamento" class="form-control" placeholder="Equipamento" autofocus>
+            <input type="text" name="equipamento" class="form-control" placeholder="Equipamento" required autofocus>
           </div>
           <div class="form-group">
-            <textarea name="resumo" rows="5" class="form-control" placeholder="Resumo"></textarea>
+            <textarea name="resumo" rows="5" class="form-control" placeholder="Resumo" required></textarea>
           </div>
           <div class="form-group">
             Arquivo: <input type="file" required name="arquivo">
