@@ -9,3 +9,8 @@
 2. No diretório de instalação do php execute ``` pecl install mongodb ``` (instale manualmente se estiver no windows)
 3. Certifique-se de que a extensão está instalada na página phpinfo
 4. Navegue ao diretório do projeto e execute ``` composer install ``` 
+
+## Falta Implementar
+* Função de Pesquisa
+* Manter e Fechar Sessão de Usuário
+* Customização das Páginas
