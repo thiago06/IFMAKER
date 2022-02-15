@@ -31,7 +31,6 @@
             <th>Resumo</th>
             <th>Anexo</th>
             <th>Data</th>
-            <th>Ação</th>
           </tr>
         </thead>
         <tbody>
@@ -48,14 +47,6 @@
             <td><?php echo $row['resumo']; ?></td>
             <td><?php echo "<a href=upload/".$row["anexo"].">" . $row["anexo"] . "</a><br />"; ?></td>
             <td><?php echo $row['data']; ?></td>
-            <td>
-              <a href="edit.php?id=<?php echo $row['id']?>" class="btn upload/n-secondary">
-                <i class="fas fa-marker"></i>
-              </a>
-              <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
-                <i class="far fa-trash-alt"></i>
-              </a>
-            </td>
           </tr>
           <?php } ?>
         </tbody>

@@ -18,12 +18,17 @@
       <br>
 
     <div class="col-md-12">
+      <div class="form-outline">
+        <input type="search" name="pesquisa" placeholder="Pesquisar" class="form-control" />
+      </div>
+      <br>
       <table class="table table-bordered">
         <thead>
           <tr>
             <th>Nome</th>
             <th>E-Mail</th>
             <th>Senha</th>
+            <th>Nivel e Acesso</th>
             <th>Data</th>
             <th>Ação</th>
           </tr>
@@ -39,6 +44,7 @@
             <td><?php echo $row['nome']; ?></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['senha']; ?></td>
+            <td><?php echo $row['nivel']; ?></td>
             <td><?php echo $row['data']; ?></td>
             <td>
               <a href="edit_user.php?id=<?php echo $row['id']?>" class="btn upload/n-secondary">

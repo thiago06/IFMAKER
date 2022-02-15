@@ -3,6 +3,7 @@ include("db.php");
 $nome = '';
 $email = '';
 $senha = '';
+$nivel = '';
 
 if  (isset($_GET['id'])) {
   $id = $_GET['id'];
@@ -13,6 +14,7 @@ if  (isset($_GET['id'])) {
     $nome = $row['nome'];
     $email = $row['email'];
     $senha = $row['senha'];
+    $nivel = $row['nivel'];
   }
 }
 
@@ -21,8 +23,9 @@ if (isset($_POST['update_user'])) {
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
+  $nivel = $_POST['nivel'];
   
-  $query = "UPDATE usuario set nome = '$nome', email = '$email', senha = '$senha' WHERE id=$id";
+  $query = "UPDATE usuario set nome = '$nome', email = '$email', senha = '$senha', nivel = '$nivel' WHERE id=$id";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Usuario Atualizado!';
   $_SESSION['message_type'] = 'warning';
@@ -45,7 +48,10 @@ if (isset($_POST['update_user'])) {
         <div class="form-group">
           <input name="senha" type="password" class="form-control" placeholder="Senha" value="<?php echo $senha; ?>">
         </div>
-
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="nivel" value="1">
+            <label class="form-check-label">ADM</label>
+        </div>
         <button class="btn-success" name="update_user">
           Atualizar
         </button>

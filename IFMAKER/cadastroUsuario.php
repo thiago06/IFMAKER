@@ -29,9 +29,14 @@
           <div class="form-group">
             <input type="email" name="email" class="form-control" placeholder="E-Mail" required autofocus>
           </div>
-		  <div class="form-group">
+		      <div class="form-group">
             <input type="password" name="senha" class="form-control" placeholder="Senha" required autofocus>
           </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="nivel" value="1">
+            <label class="form-check-label">ADM</label>
+          </div>
+          <br>
           <input type="submit" name="save_user" class="btn btn-success btn-block" value="OK">
         </form>
       </div>

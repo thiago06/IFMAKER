@@ -6,7 +6,8 @@ if (isset($_POST['save_user'])) {
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
-  $query = "INSERT INTO usuario(nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+  $nivel = $_POST['nivel'];
+  $query = "INSERT INTO usuario(nome, email, senha, nivel) VALUES ('$nome', '$email', '$senha', '$nivel')";
  
   $result = mysqli_query($conn, $query);
   if(!$result) {
