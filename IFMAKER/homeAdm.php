@@ -13,23 +13,33 @@
         </div>
     <?php session_unset(); } ?>
 
-  <br>
+    
   <div class="d-flex justify-content-center align-items-center">
-    <a class="link" href="cadastroProjeto.php">CADASTRO DE PROJETOS</a>   
-  </div>
-  <br>
-  <div class="d-flex justify-content-center align-items-center">
-    <a class="link" href="cadastroUsuario.php">CADASTRO DE USUÁRIOS</a> 
-  </div>
-  <br>
-  <div class="d-flex justify-content-center align-items-center">
-    <a class="link" href="listagemProjetos.php">CONSULTA DE PROJETOS</a> 
-  </div>
-  <br>
-  <div class="d-flex justify-content-center align-items-center">
-    <a class="link" href="listagemUsuarios.php">CONSULTA DE USUARIOS</a> 
-  </div>
-  <br>
+    <div class="col-md-7">
+      <br>
+      <div onclick="location.href='cadastroProjeto.php'" class="card card-body d-flex justify-content-center align-items-center" 
+      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
+        <a style="font-size:100%; color:black;">CADASTRO DE PROJETOS</a>   
+      </div>
+      <br>
+      <div onclick="location.href='cadastroUsuario.php'" class="card card-body d-flex justify-content-center align-items-center" 
+      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
+        <a style="font-size:100%; color:black;">CADASTRO DE USUÁRIOS</a>   
+      </div>
+      <br>
+      <div onclick="location.href='listagemProjetos.php'" class="card card-body d-flex justify-content-center align-items-center" 
+      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
+        <a style="font-size:100%; color:black;">CONSULTA DE PROJETOS</a>   
+      </div>
+      <br>
+      <div onclick="location.href='listagemUsuarios.php'" class="card card-body d-flex justify-content-center align-items-center" 
+      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
+        <a style="font-size:100%; color:black;">CONSULTA DE USUÁRIOS</a>   
+      </div>
+      <br>
+    </div>   
+  </div> 
+
 
 <?php include('includes/footer.php'); ?>
 

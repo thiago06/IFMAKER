@@ -7,8 +7,10 @@ if (isset($_POST['save_task'])) {
   $responsavel = $_POST['responsavel'];
   $equipamento = $_POST['equipamento'];
   $resumo = $_POST['resumo'];
-  $extensao = strtolower(substr($_FILES['arquivo']['name'], -4));
-  $novo_nome = md5(time()) . $extensao;
+  //$extensao = strtolower(substr($_FILES['arquivo']['name'], -4));
+  $path = $_FILES['arquivo']['name'];
+  $extensao = pathinfo($path, PATHINFO_EXTENSION);
+  $novo_nome = md5(time()) . "." . $extensao;
   $diretorio = "upload/";
   $query = "INSERT INTO projeto(titulo, responsavel, equipamento, resumo, anexo, id) VALUES ('$titulo', '$responsavel', '$equipamento', '$resumo', '$novo_nome', null)";
  // $query = "INSERT INTO arquivo(codigo, arquivo, data) VALUES(null, '$novo_nome', NOW())";

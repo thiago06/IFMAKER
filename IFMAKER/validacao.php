@@ -28,11 +28,12 @@
             }
         }else{    
             $_SESSION['loginErro'] = "Usuário ou senha Inválido";
-			$_SESSION['message_type'] = 'success';
+			$_SESSION['message_type'] = 'danger';
             header("Location: login.php");		
         }
     }else{
         $_SESSION['loginErro'] = "Usuário ou senha inválido";
+        $_SESSION['message_type'] = 'danger';
         header("Location: login.php");
     }
 ?>

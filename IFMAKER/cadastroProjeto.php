@@ -29,8 +29,15 @@
           <div class="form-group">
             <input type="text" name="responsavel" class="form-control" placeholder="Responsável" required autofocus>
           </div>
-          <div class="form-group">
-            <input type="text" name="equipamento" class="form-control" placeholder="Equipamento" required autofocus>
+          
+          <div class="input-group mb-3">
+            <label class="input-group-text " for="inputGroupSelect01">Equipamento</label>
+            <select class="form-select form-control" name="equipamento" id="inputGroupSelect01">
+              <option selected>Escolha</option>
+              <option value="Impressora 3D">Impressora 3D</option>
+              <option value="Impressora 4D ">Impressora 4D</option>
+              <option value="Impressora 5D">Impressora 5D</option>
+            </select>
           </div>
           <div class="form-group">
             <textarea name="resumo" rows="5" class="form-control" placeholder="Resumo" required></textarea>

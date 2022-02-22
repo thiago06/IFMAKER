@@ -12,9 +12,15 @@
   <body>
 
  <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="homeAdm.php">
             <img src="https://www.ifpb.edu.br/prpipg/pesquisa/imagens-pesquisa/ifpb.png/@@images/0609b1d7-4a7d-41be-bd18-081ecb35eb9e.png" width="60" height="30" class="d-inline-block align-top" alt="">
             IF MAKER
+        </a>
+        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="index.php">
+            <img src="https://iconarchive.com/download/i89546/alecive/flatwoken/Apps-Dialog-Logout.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+            SAIR
+        </a> 
         </a>	
     </nav>
 

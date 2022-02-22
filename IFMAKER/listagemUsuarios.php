@@ -18,9 +18,10 @@
       <br>
 
     <div class="col-md-12">
-      <div class="form-outline">
-        <input type="search" name="pesquisa" placeholder="Pesquisar" class="form-control" />
-      </div>
+      <form method="GET" class="d-flex justify-content-center align-items-center">
+        <input class="form-control" placeholder="Pesquisar" type="text" name="pesquisa" value=""/>
+        <input type="submit" value="OK" class="btn btn-success">
+      </form> 
       <br>
       <table class="table table-bordered">
         <thead>
@@ -36,9 +37,14 @@
         <tbody>
 
           <?php
+          $pesquisa = "";
+          if(isset($_GET['pesquisa'])){
+            $pesquisa = $_GET['pesquisa'];
+          }  
           $query = "SELECT * FROM usuario";
-          $result_tasks = mysqli_query($conn, $query);    
-
+          //$result_tasks = mysqli_query($conn, $query);  
+          $result_tasks = mysqli_query($conn,"select * from usuario where `nome` like '%$pesquisa%'");  
+          
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
             <td><?php echo $row['nome']; ?></td>
