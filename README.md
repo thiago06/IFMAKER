@@ -11,6 +11,4 @@
 4. Navegue ao diretório do projeto e execute ``` composer install ``` 
 
 ## Falta Implementar
-* Função de Pesquisa
-* Manter e Fechar Sessão de Usuário
-* Customização das Páginas
+* Manter e Fechar Sessão de Usuário 
