@@ -2,7 +2,7 @@
 
 <?php include('includes/header.php'); ?>
 
-<?php
+  <?php
       
     if (isset($_SESSION['message'])) { ?>
         <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
@@ -11,8 +11,17 @@
           <span aria-hidden="true">&times;</span>
           </button>
         </div>
-    <?php session_unset(); } ?>
-
+    <?php unset(
+      $_SESSION['message'],
+    ); } 
+    ?>
+    
+    <?php
+      if (isset($_SESSION['usuarioNiveisAcessoId']) == 0) {
+        return header('location: login.php');
+    }
+    ?>
+    
     
   <div class="d-flex justify-content-center align-items-center">
     <div class="col-md-7">

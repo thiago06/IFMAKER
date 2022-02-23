@@ -5,7 +5,7 @@
         $_SESSION['usuarioNome'],
         $_SESSION['usuarioNiveisAcessoId'],
         $_SESSION['usuarioEmail'],
-        $_SESSION['usuarioSenha']
+        $_SESSION['usuarioSenha'],
     );   
     $_SESSION['logout'] = "Você Saiu!";
     header("Location: login.php");

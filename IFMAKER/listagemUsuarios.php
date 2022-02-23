@@ -13,6 +13,12 @@
       </div>
       <?php session_unset(); } ?>
     
+      <?php
+      if (isset($_SESSION['usuarioNiveisAcessoId']) == 0) {
+        return header('location: login.php');
+      }
+      ?>
+
       <br>
       <h1 class="d-flex justify-content-center align-items-center">Listagem de Usuarios</h1>
       <br>

@@ -16,7 +16,7 @@ if (isset($_POST['save_user'])) {
 
   $_SESSION['message'] = 'Cadastrado!';
   $_SESSION['message_type'] = 'success';
-  header('Location: listagemUsuarios.php');
+  header('Location: homeAdm.php');
 
 }
 

@@ -10,9 +10,9 @@ if(isset($_GET['id'])) {
     die("Query Failed.");
   }
 
-  $_SESSION['message'] = 'Usaurio Deletado!';
+  $_SESSION['message'] = 'Usuario Deletado!';
   $_SESSION['message_type'] = 'danger';
-  header('Location: listagemUsuarios.php');
+  header('Location: homeAdm.php');
 }
 
 ?>

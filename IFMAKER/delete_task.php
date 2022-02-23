@@ -12,7 +12,7 @@ if(isset($_GET['id'])) {
 
   $_SESSION['message'] = 'Projeto Deletado!';
   $_SESSION['message_type'] = 'danger';
-  header('Location: listagemProjetos.php');
+  header('Location: homeAdm.php');
 }
 
 ?>
