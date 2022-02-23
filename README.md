@@ -10,5 +10,3 @@
 3. Certifique-se de que a extensão está instalada na página phpinfo
 4. Navegue ao diretório do projeto e execute ``` composer install ``` 
 
-## Falta Implementar
-* Manter e Fechar Sessão de Usuário 
