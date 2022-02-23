@@ -40,7 +40,7 @@ if (isset($_POST['update'])) {
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Projeto Atualizado!';
   $_SESSION['message_type'] = 'success';
-  header('Location: homeAdm.php');
+  header('Location: listagemProjetos.php');
 }
 if (isset($_POST['cancel'])) {
   header('Location: listagemProjetos.php');

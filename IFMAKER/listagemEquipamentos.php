@@ -12,7 +12,7 @@
         </button>
       </div>
       <?php unset(
-        $_SESSION ['message'],
+        $_SESSION['message'],
       ); } ?>
     
       <?php
@@ -22,23 +22,21 @@
       ?>
 
       <br>
-      <h1 class="d-flex justify-content-center align-items-center">Listagem de Projetos</h1>
+      <h1 class="d-flex justify-content-center align-items-center">Listagem de Equipamentos</h1>
       <br>
 
     <div class="col-md-12">
-    <form method="GET" class="d-flex justify-content-center align-items-center">
-      <input class="form-control" placeholder="Pesquisar" type="text" name="pesquisa" value=""/>
-      <input type="submit" value="OK" class="btn btn-success">
-    </form>
+      <form method="GET" class="d-flex justify-content-center align-items-center">
+        <input class="form-control" placeholder="Pesquisar" type="text" name="pesquisa" value=""/>
+        <input type="submit" value="OK" class="btn btn-success">
+      </form> 
       <br>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Titulo</th>
-            <th>Responsável</th>
-            <th>Equipamento</th>
-            <th>Resumo</th>
-            <th>Anexo</th>
+            <th>Nome</th>
+            <th>Modelo</th>
+            <th>Série</th>
             <th>Data</th>
             <th>Ação</th>
           </tr>
@@ -50,23 +48,21 @@
           if(isset($_GET['pesquisa'])){
             $pesquisa = $_GET['pesquisa'];
           }  
-          $query = "SELECT * FROM projeto";
+          $query = "SELECT * FROM equipamento";
           //$result_tasks = mysqli_query($conn, $query);  
-          $result_tasks = mysqli_query($conn,"select * from projeto where `titulo` like '%$pesquisa%'");  
-
+          $result_tasks = mysqli_query($conn,"select * from equipamento where `nome` like '%$pesquisa%'");  
+          
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
-            <td><?php echo $row['titulo']; ?></td>
-            <td><?php echo $row['responsavel']; ?></td>
-            <td><?php echo $row['equipamento']; ?></td>
-            <td><?php echo $row['resumo']; ?></td>
-            <td><?php echo "<a href=upload/".$row["anexo"].">" . $row["anexo"] . "</a><br />"; ?></td>
+            <td><?php echo $row['nome']; ?></td>
+            <td><?php echo $row['modelo']; ?></td>
+            <td><?php echo $row['serie']; ?></td>
             <td><?php echo $row['data']; ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row['id']?>" class="btn upload/n-secondary">
+              <a href="edit_equipamento.php?id=<?php echo $row['id']?>" class="btn upload/n-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+              <a href="delete_equipamento.php?id=<?php echo $row['id']?>" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>

@@ -3,7 +3,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-  <footer class="text-center text-white bg-dark" style=" position: absolute; padding: 5px 5px 0px 5px; bottom: 0; width: 100%;">
+  <footer class="text-center text-white bg-dark" style=" width: 100%; height: 70px; position: absolute;">
     <div class="container p-4 pb-0">
       © 2022 PDS -
       <a class="text-white" href="https://github.com/thiago06/IFMAKER">IF MAKER GITHUB</a>

@@ -15,7 +15,6 @@
             $_SESSION['usuarioNome'] = $resultado['nome'];
             $_SESSION['usuarioNiveisAcessoId'] = $resultado['nivel'];
             $_SESSION['usuarioEmail'] = $resultado['email'];
-            setcookie("Login",$email,time()+7200);
             session_start();
             if($_SESSION['usuarioNiveisAcessoId'] == "1"){
                 header("Location: homeAdm.php");

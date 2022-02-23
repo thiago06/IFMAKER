@@ -5,11 +5,6 @@ $email = '';
 $senha = '';
 $nivel = '';
 
-
-if (isset($_SESSION['usuarioNiveisAcessoId']) == 0) {
-  return header('location: login.php');
-}
-  
 if  (isset($_GET['id'])) {
   $id = $_GET['id'];
   $query = "SELECT * FROM usuario WHERE id=$id";
@@ -34,7 +29,7 @@ if (isset($_POST['update_user'])) {
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Usuario Atualizado!';
   $_SESSION['message_type'] = 'warning';
-  header('Location: homeAdm.php');
+  header('Location: listagemUsuarios.php');
 }
 if (isset($_POST['cancel'])) {
   header('Location: homeAdm.php');

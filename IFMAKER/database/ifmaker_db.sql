@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Fev-2022 às 20:19
+-- Tempo de geração: 23-Fev-2022 às 21:50
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 8.0.8
 
@@ -44,6 +44,28 @@ INSERT INTO `arquivo` (`codigo`, `arquivo`, `data`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `equipamento`
+--
+
+CREATE TABLE `equipamento` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `data` timestamp NOT NULL DEFAULT current_timestamp(),
+  `modelo` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `serie` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `equipamento`
+--
+
+INSERT INTO `equipamento` (`id`, `nome`, `data`, `modelo`, `serie`) VALUES
+(2, 'Impressora 6D', '2022-02-23 18:51:04', 'Hs 1000S', 'BRG4561F2'),
+(3, 'Impressora 7D', '2022-02-23 19:25:36', 'Hs 1000V', 'eadada');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `projeto`
 --
 
@@ -62,9 +84,11 @@ CREATE TABLE `projeto` (
 --
 
 INSERT INTO `projeto` (`id`, `titulo`, `responsavel`, `equipamento`, `resumo`, `data`, `anexo`) VALUES
-(6, 'Projeto 1', 'Thiago', 'Impressora 3D', 'Sei lá\r\n', '2022-01-25 20:36:37', ''),
-(7, 'Projeto 2', 'Thiago', 'Impressorassora 4', 'f', '2022-01-25 21:00:11', ''),
-(8, 'TESTE', 'TESTE', 'testeab', 'frara', '2022-01-25 21:04:52', '');
+(6, 'Projeto 1', 'Thiago', 'Impressora 5D', 'Sei lá\r\n', '2022-01-25 20:36:37', ''),
+(20, 'TESTE', 'dad', 'Impressora 3D', 'ad', '2022-02-21 20:32:35', '3d901988c0fd30699fa70ec5dccba04f.pdf'),
+(21, 'TESTE 2', 'fafa', 'Impressora 4D', 'sgs', '2022-02-21 20:45:46', '5cbb38c91ef3bb1baf4cf12af40e6b77.sql'),
+(26, 'TESTE 6', 'Thiago', 'Impressora 5D', 'ests ', '2022-02-23 14:42:55', '6815c77ef32ce51e8d8dc8d7d9894c74.backup'),
+(30, 'Projeto 132132135435', 'EU', 'Impressora 7D', 'afFa', '2022-02-23 20:17:05', 'd28e174ac2cfe660c62917f483937639.sql');
 
 -- --------------------------------------------------------
 
@@ -87,8 +111,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `data`, `nivel`) VALUES
 (2, 'Thiago Guareschi', 'thiago.guareschi@ibiruba.ifrs.edu.br', '123', '2022-02-14 19:09:26', 1),
-(7, 'ada', 'dada@adaa.com', 'dada', '2022-02-15 17:25:32', 0),
-(10, 'Usuário', 'user@gmail.com', '123', '2022-02-15 18:19:41', 0);
+(10, 'Usuário', 'user@gmail.com', '123', '2022-02-15 18:19:41', 0),
+(13, 'Lestaf', 'lestaf@ibiruba.ifrs.edu.br', '123', '2022-02-23 17:00:46', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -99,6 +123,12 @@ INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `data`, `nivel`) VALUES
 --
 ALTER TABLE `arquivo`
   ADD PRIMARY KEY (`codigo`);
+
+--
+-- Índices para tabela `equipamento`
+--
+ALTER TABLE `equipamento`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `projeto`
@@ -123,16 +153,22 @@ ALTER TABLE `arquivo`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT de tabela `equipamento`
+--
+ALTER TABLE `equipamento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de tabela `projeto`
 --
 ALTER TABLE `projeto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
