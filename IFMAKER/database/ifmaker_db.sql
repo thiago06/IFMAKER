@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Fev-2022 às 21:50
+-- Tempo de geração: 24-Fev-2022 às 21:33
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 8.0.8
 
@@ -61,7 +61,8 @@ CREATE TABLE `equipamento` (
 
 INSERT INTO `equipamento` (`id`, `nome`, `data`, `modelo`, `serie`) VALUES
 (2, 'Impressora 6D', '2022-02-23 18:51:04', 'Hs 1000S', 'BRG4561F2'),
-(3, 'Impressora 7D', '2022-02-23 19:25:36', 'Hs 1000V', 'eadada');
+(3, 'Impressora 7D', '2022-02-23 19:25:36', 'Hs 1000V', 'eadada'),
+(4, 'Drone X5', '2022-02-24 19:19:34', 'X5 H1000', 'HGT21313M4');
 
 -- --------------------------------------------------------
 
@@ -84,11 +85,8 @@ CREATE TABLE `projeto` (
 --
 
 INSERT INTO `projeto` (`id`, `titulo`, `responsavel`, `equipamento`, `resumo`, `data`, `anexo`) VALUES
-(6, 'Projeto 1', 'Thiago', 'Impressora 5D', 'Sei lá\r\n', '2022-01-25 20:36:37', ''),
-(20, 'TESTE', 'dad', 'Impressora 3D', 'ad', '2022-02-21 20:32:35', '3d901988c0fd30699fa70ec5dccba04f.pdf'),
-(21, 'TESTE 2', 'fafa', 'Impressora 4D', 'sgs', '2022-02-21 20:45:46', '5cbb38c91ef3bb1baf4cf12af40e6b77.sql'),
-(26, 'TESTE 6', 'Thiago', 'Impressora 5D', 'ests ', '2022-02-23 14:42:55', '6815c77ef32ce51e8d8dc8d7d9894c74.backup'),
-(30, 'Projeto 132132135435', 'EU', 'Impressora 7D', 'afFa', '2022-02-23 20:17:05', 'd28e174ac2cfe660c62917f483937639.sql');
+(32, 'Projeto 1', 'Cleyton ', 'Drone X5', 'Ele voa', '2022-02-24 20:23:51', '57597563ae71adfd6512404f466b48c0.png'),
+(33, 'Projeto 2', 'Robson', 'Impressora 7D', 'Imprimi', '2022-02-24 20:28:46', '2353acb3310e2d3a72a3528bae841ed9.pdf');
 
 -- --------------------------------------------------------
 
@@ -112,7 +110,8 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `data`, `nivel`) VALUES
 (2, 'Thiago Guareschi', 'thiago.guareschi@ibiruba.ifrs.edu.br', '123', '2022-02-14 19:09:26', 1),
 (10, 'Usuário', 'user@gmail.com', '123', '2022-02-15 18:19:41', 0),
-(13, 'Lestaf', 'lestaf@ibiruba.ifrs.edu.br', '123', '2022-02-23 17:00:46', 1);
+(13, 'Lestaf ', 'lestaf10@hotmail.com', '123', '2022-02-23 17:00:46', 0),
+(16, 'Matheus Ferreira', 'umilover@outlook.com', '123', '2022-02-24 20:31:29', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -156,19 +155,19 @@ ALTER TABLE `arquivo`
 -- AUTO_INCREMENT de tabela `equipamento`
 --
 ALTER TABLE `equipamento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `projeto`
 --
 ALTER TABLE `projeto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -24,12 +24,12 @@ if (isset($_POST['update_equipamento'])) {
   
   $query = "UPDATE equipamento set nome = '$nome', modelo = '$modelo', serie = '$serie' WHERE id=$id";
   mysqli_query($conn, $query);
-  $_SESSION['message'] = 'Eqipamento Atualizado!';
+  $_SESSION['message'] = 'Equipamento Atualizado!';
   $_SESSION['message_type'] = 'warning';
   header('Location: listagemEquipamentos.php');
 }
 if (isset($_POST['cancel'])) {
-  header('Location: homeAdm.php');
+  header('Location: listagemEquipamentos.php');
 }
 ?>
 
@@ -57,7 +57,7 @@ if (isset($_POST['cancel'])) {
         <button class="btn-success" name="update_equipamento">
           Atualizar
         </button>
-        <button class="btn-danger" name="cancel" href="listagemEquipamentos.php">
+        <button class="btn-danger" name="cancel">
           Cancelar
         </button>
       </form>

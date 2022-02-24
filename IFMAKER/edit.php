@@ -65,14 +65,19 @@ if (isset($_POST['cancel'])) {
         <div class="form-group">
           <input name="responsavel" type="text" class="form-control" value="<?php echo $responsavel; ?>">
         </div>
-        <div class="form-group">
-            <select class="form-select form-control" name="equipamento" id="inputGroupSelect01" value="<?php echo $equipamento; ?>">
+        <?php
+             $query2 = "SELECT nome  FROM equipamento";
+             $result_tasks = mysqli_query($conn, $query2);  
+          ?>
+        <div class="input-group mb-3">
+            <label class="input-group-text " for="inputGroupSelect01">Equipamento</label>
+            <select class="form-select form-control" name="equipamento" id="inputGroupSelect01">
               <option selected><?php echo $equipamento; ?></option>
-              <option value="Impressora 3D">Impressora 3D</option>
-              <option value="Impressora 4D">Impressora 4D</option>
-              <option value="Impressora 5D">Impressora 5D</option>
-            </select>
-        </div>
+              <?php while($row2 = mysqli_fetch_assoc($result_tasks)) { ?>
+              <option value="<?php echo $row2['nome']; ?>"><?php echo $row2['nome']; ?></option>
+              <?php } ?>
+              </select>
+          </div>
         <div class="form-group">
         <textarea name="resumo" class="form-control" cols="30" rows="5"><?php echo $resumo;?></textarea>
         </div>

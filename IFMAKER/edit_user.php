@@ -32,7 +32,7 @@ if (isset($_POST['update_user'])) {
   header('Location: listagemUsuarios.php');
 }
 if (isset($_POST['cancel'])) {
-  header('Location: homeAdm.php');
+  header('Location: listagemUsuarios.php');
 }
 ?>
 
@@ -64,7 +64,7 @@ if (isset($_POST['cancel'])) {
         <button class="btn-success" name="update_user">
           Atualizar
         </button>
-        <button class="btn-danger" name="cancel" href="listagemProjetos.php">
+        <button class="btn-danger" name="cancel">
           Cancelar
         </button>
       </form>

@@ -21,44 +21,42 @@
         return header('location: login.php');
     }
     ?>
-    
-    
+      
   <div class="d-flex justify-content-center align-items-center">
     <div class="col-md-7">
       <br>
       <div onclick="location.href='cadastroProjeto.php'" class="card card-body d-flex justify-content-center align-items-center" 
-      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
-        <a style="font-size:100%; color:black;">CADASTRO DE PROJETOS</a>   
+      id="optionsHome">
+        <a id="aHome">CADASTRO DE PROJETOS</a>   
       </div>
       <br>
-      <div onclick="location.href='cadastroUsuario.php'" class="card card-body d-flex justify-content-center align-items-center" 
-      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
-        <a style="font-size:100%; color:black;">CADASTRO DE USUÁRIOS</a>   
+      <div onclick="location.href='cadastroUsuario.php'" class="card card-body d-flex justify-content-center align-items-center"
+      id="optionsHome">
+        <a id="aHome">CADASTRO DE USUÁRIOS</a>   
       </div>
       <br>
       <div onclick="location.href='cadastroEquipamento.php'" class="card card-body d-flex justify-content-center align-items-center" 
-      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
-        <a style="font-size:100%; color:black;">CADASTRO DE EQUIPAMENTOS</a>   
+      id="optionsHome">
+        <a id="aHome">CADASTRO DE EQUIPAMENTOS</a>   
       </div>
       <br>
       <div onclick="location.href='listagemProjetos.php'" class="card card-body d-flex justify-content-center align-items-center" 
-      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
-        <a style="font-size:100%; color:black;">CONSULTA DE PROJETOS</a>   
+      id="optionsHome">
+        <a id="aHome">CONSULTA DE PROJETOS</a>   
       </div>
       <br>
       <div onclick="location.href='listagemUsuarios.php'" class="card card-body d-flex justify-content-center align-items-center" 
-      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
-        <a style="font-size:100%; color:black;">CONSULTA DE USUÁRIOS</a>   
+      id="optionsHome">
+        <a id="aHome">CONSULTA DE USUÁRIOS</a>   
       </div>
       <br>
       <div onclick="location.href='listagemEquipamentos.php'" class="card card-body d-flex justify-content-center align-items-center" 
-      style="cursor: pointer; border-radius: 25px; background-color:#27AE60; font-size:200%; font-family: Arial Black; color:black;">
-        <a style="font-size:100%; color:black;">CONSULTA DE EQUIPAMENTOS</a>   
+      id="optionsHome">
+        <a id="aHome">CONSULTA DE EQUIPAMENTOS</a>   
       </div>
       <br>
     </div>   
   </div> 
-
 
 <?php include('includes/footer.php'); ?>
 
