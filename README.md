@@ -2,7 +2,8 @@
 
 ## Requerimentos
 * php 7.4^
-* Mongodb 5.0^
+* Mysql
+* Composer
 
 ## INSTALAÇÃO
 1. Instalar o [Composer](https://getcomposer.org/download/) (certifique-se que o diretório do composer se encontra na PATH)
